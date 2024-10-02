@@ -14,12 +14,11 @@ function App() {
       axios
         .get(API_ENDPOINT)
           .then((response) => {
-              const fetchedCharacters = response?.data?.body || [];
-              if (Array.isArray(fetchedCharacters) && fetchedCharacters.length > 0) {
-                setCharacters((draft) => {
-                  draft.push(...fetchedCharacters);
-                });
-              } 
+            console.log(response)
+            const fetchedCharacters = response?.data?.body || [];
+            if (Array.isArray(fetchedCharacters) && fetchedCharacters.length > 0) {
+              setCharacters(fetchedCharacters);
+            } 
           })
         .catch((error) => {
           console.error("Error fetching characters:", error);
