@@ -57,3 +57,5 @@ export const SKILL_LIST = [
 ]
 
 export const API_ENDPOINT = 'https://recruiting.verylongdomaintotestwith.ca/api/{ashutoshlamba}/character'
+
+export const MAX_ATTRIBUTE_POINTS = 70
