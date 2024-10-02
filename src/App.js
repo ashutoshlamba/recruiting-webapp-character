@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts.js';
-
+import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST, API_ENDPOINT } from './consts.js';
+import { useImmer } from 'use-immer';
 
 function App() {
-  const [num, setNum] = useState(0);
+  const [characters, setCharacters] = useImmer([]);
   return (
     <div className="App">
       <header className="App-header">
@@ -12,10 +12,6 @@ function App() {
       </header>
       <section className="App-section">
         <div>
-          Value:
-          {num}
-          <button>+</button>
-          <button>-</button>
         </div>
       </section>
     </div>
