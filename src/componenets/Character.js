@@ -8,6 +8,7 @@ export default function Character({ attributes, handleUpdateCharacter, skills, i
 
   return (
     <div>
+      <h1>Character #{id}</h1>
         <Attributes
                     attributes={attributes}
                     handleUpdateCharacter={handleUpdateCharacter}

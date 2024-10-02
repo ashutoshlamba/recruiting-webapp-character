@@ -72,13 +72,13 @@ function App() {
       </header>
       <section className="App-section">
         <div>
-        {characters.map((character, index) => (
+        {characters.map((character, id) => (
           <Character
-            key={index}
-            index={index + 1}
+            key={id}
+            id={id + 1}
             attributes={character.attributes}
             handleUpdateCharacter={(character) =>
-                handleUpdateCharacter(index, character)
+                handleUpdateCharacter(id, character)
             }
             skills={character.skills}
           />
